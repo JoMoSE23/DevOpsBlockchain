@@ -1,0 +1,125 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "numberOld",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "numberNew",
+						"type": "uint256"
+					}
+				],
+				"name": "numberUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "retrieve",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "scale",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:dev-run-script": "./scripts/deploy_with_ethers.ts",
+			"details": "Store & retrieve value in a variable",
+			"kind": "dev",
+			"methods": {
+				"retrieve()": {
+					"details": "Return value ",
+					"returns": {
+						"_0": "value of 'number'"
+					}
+				},
+				"store(uint256,uint256)": {
+					"details": "Store value in variable",
+					"params": {
+						"num": "value to store"
+					}
+				}
+			},
+			"title": "Storage",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Seminar DevOps (1)/contracts/contracts/Diamond/1_StorageMod100.sol": "Storage"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Seminar DevOps (1)/contracts/contracts/Diamond/1_StorageMod100.sol": {
+			"keccak256": "0xb3ede25515c8c72974789b55faa022a1689c5a915ffb852bd103dd3439281841",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://103e877cfd77dcee52391af3da881600cfc30833fd8bba860854ced485c6bd2c",
+				"dweb:/ipfs/QmZB9KREopYbTVpAog4odLE7wGjJLw8vs1kGKVp1eg6ER2"
+			]
+		},
+		"Seminar DevOps (1)/contracts/contracts/Diamond/DiamondStorage.sol": {
+			"keccak256": "0xc4b34a445130044c9d895ec825f9383dfa51deb5d8fd0198337ff5aae565248a",
+			"urls": [
+				"bzz-raw://f4430e513763262f564f53034dcfe452c69c64b10fdd7ea0fee6d47bbba5eee4",
+				"dweb:/ipfs/QmWTb2FuGKXWw81e4hrYE4iDScnC1K6npCiR34VTDMdi2T"
+			]
+		}
+	},
+	"version": 1
+}

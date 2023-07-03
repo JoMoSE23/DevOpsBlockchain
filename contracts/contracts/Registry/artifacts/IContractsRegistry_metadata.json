@@ -1,0 +1,380 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isProxy",
+						"type": "bool"
+					}
+				],
+				"name": "AddedContract",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "RemovedContract",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "addContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "addProxyContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "getContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "getImplementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getProxyUpgrader",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "hasContract",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "justAddProxyContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "removeContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "newImplementation",
+						"type": "address"
+					}
+				],
+				"name": "upgradeContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "newImplementation",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "upgradeContractAndCall",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"AddedContract(string,address,bool)": {
+					"params": {
+						"contractAddress": "the address of the added contract",
+						"isProxy": "whether the added contract is a proxy",
+						"name": "the name of the contract"
+					}
+				},
+				"RemovedContract(string)": {
+					"params": {
+						"name": "the name of the removed contract"
+					}
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"addContract(string,address)": {
+					"params": {
+						"contractAddress": "the address of the contract",
+						"name": "the name to associate the contract with"
+					}
+				},
+				"addProxyContract(string,address)": {
+					"params": {
+						"contractAddress": "the address of the implementation",
+						"name": "the name to associate the contract with"
+					}
+				},
+				"getContract(string)": {
+					"params": {
+						"name": "the name of the contract"
+					},
+					"returns": {
+						"_0": "the address of the contract"
+					}
+				},
+				"getImplementation(string)": {
+					"params": {
+						"name": "the name of the contract"
+					},
+					"returns": {
+						"_0": "the implementation address"
+					}
+				},
+				"getProxyUpgrader()": {
+					"returns": {
+						"_0": "the proxy admin address"
+					}
+				},
+				"hasContract(string)": {
+					"params": {
+						"name": "the name of the contract"
+					},
+					"returns": {
+						"_0": "true if the contract is present in the registry"
+					}
+				},
+				"justAddProxyContract(string,address)": {
+					"params": {
+						"contractAddress": "the address of the proxy",
+						"name": "the name to associate the contract with"
+					}
+				},
+				"removeContract(string)": {
+					"params": {
+						"name": "the associated name with the contract"
+					}
+				},
+				"upgradeContract(string,address)": {
+					"params": {
+						"name": "the name of the proxy contract",
+						"newImplementation": "the new implementation the proxy will be upgraded to  It is the Owner's responsibility to ensure the compatibility between implementations"
+					}
+				},
+				"upgradeContractAndCall(string,address,bytes)": {
+					"params": {
+						"data": "the data that the new implementation will be called with. This can be an ABI encoded function call  It is the Owner's responsibility to ensure the compatibility between implementations",
+						"name": "the name of the proxy contract",
+						"newImplementation": "the new implementation the proxy will be upgraded to"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"AddedContract(string,address,bool)": {
+					"notice": "REQUIRED The event that is emitted when the contract gets added to the registry"
+				},
+				"RemovedContract(string)": {
+					"notice": "REQUIRED The event that is emitted when the contract get removed from the registry"
+				}
+			},
+			"kind": "user",
+			"methods": {
+				"addContract(string,address)": {
+					"notice": "REQUIRED The function that adds pure (non-proxy) contracts to the ContractsRegistry. The contracts MAY either be  the ones the system does not have direct upgradeability control over or the ones that are not upgradeable by design"
+				},
+				"addProxyContract(string,address)": {
+					"notice": "REQUIRED The function that adds the contracts and deploys the Transaprent proxy above them.  It MAY be used to add contract that the ContractsRegistry has to be able to upgrade"
+				},
+				"getContract(string)": {
+					"notice": "REQUIRED The function that returns an associated contract by the name"
+				},
+				"getImplementation(string)": {
+					"notice": "RECOMMENDED The function that returns an implementation of the given proxy contract"
+				},
+				"getProxyUpgrader()": {
+					"notice": "RECOMMENDED The function that returns the admin of the added proxy contracts"
+				},
+				"hasContract(string)": {
+					"notice": "OPTIONAL The function that checks if a contract with a given name has been added"
+				},
+				"justAddProxyContract(string,address)": {
+					"notice": "RECOMMENDED The function that adds an already deployed proxy to the ContractsRegistry. It MAY be used  when the system migrates to the new ContractRegistry. In that case, the new ProxyUpgrader MUST have the  credentials to upgrade the newly added proxies"
+				},
+				"removeContract(string)": {
+					"notice": "REQUIRED The function to remove contracts from the ContractsRegistry"
+				},
+				"upgradeContract(string,address)": {
+					"notice": "REQUIRED The function that upgrades added proxy contract with a new implementation"
+				},
+				"upgradeContractAndCall(string,address,bytes)": {
+					"notice": "RECOMMENDED The function that upgrades added proxy contract with a new implementation, providing data"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Registry/IContractRegistry.sol": "IContractsRegistry"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Registry/IContractRegistry.sol": {
+			"keccak256": "0xcfa60334c3b3b4334afbadbfcefa2ababde6c485dbf4cd827be7d255129c0ba1",
+			"urls": [
+				"bzz-raw://add6855b9c7a52bd618c4dbfce209621997224591d329d6bab18cb98c197b8f2",
+				"dweb:/ipfs/QmdmUJxjG57keQJXbX1dKLUd22y25MEqrP95NWFmu82YeW"
+			]
+		}
+	},
+	"version": 1
+}
