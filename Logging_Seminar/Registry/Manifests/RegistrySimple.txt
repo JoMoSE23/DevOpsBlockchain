@@ -1,0 +1,6 @@
+This case is used  to asses the fundamental logic of the logging framework and the registry pattern.
+
+1. AddedContract
+2. RemovedContract
+
+The outcome is quite predictable so look at indications for real life use cases (e.g. seperation between usage and locating contract)

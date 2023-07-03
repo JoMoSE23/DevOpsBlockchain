@@ -1,0 +1,20 @@
+SET BLOCKCHAIN "Ethereum";
+
+SET OUTPUT FOLDER "C:/SeminarNetwork/blf-code/Blockchain-Logging-Framework/Logging_Seminar/Proxy/Output";
+SET CONNECTION "ws://localhost:8554";
+
+EMIT LOG LINE ("Proxy");
+
+address contract = 0x2178Ff4dFD83Cd9d0FF1aDe34d60185D8dF4153a;
+BLOCKS (500) (1350) {
+
+ LOG ENTRIES (0x2178Ff4dFD83Cd9d0FF1aDe34d60185D8dF4153a) (numberUpdated(uint256 numberOld, uint256 numberNew)) {
+    EMIT LOG LINE ("Number got updated");
+
+    EMIT LOG LINE (numberOld);
+    EMIT LOG LINE (numberNew);
+
+    EMIT XES EVENT ()(numberNew)()("was put into the Storage" as xs:string concept:Added);
+    }
+
+}

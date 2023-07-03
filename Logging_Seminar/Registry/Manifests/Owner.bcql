@@ -1,0 +1,22 @@
+SET BLOCKCHAIN "Ethereum";
+
+SET OUTPUT FOLDER "C:/SeminarNetwork/blf-code/Blockchain-Logging-Framework/Logging_Seminar/Registry/Output";
+SET CONNECTION "ws://localhost:8554";
+
+EMIT LOG LINE ("Owner");
+
+address contract = 0x87eAF5136F9AD0381747404DDF1360E7B54f5Ed2;
+BLOCKS (500) (1150) {
+
+ LOG ENTRIES (0x87eAF5136F9AD0381747404DDF1360E7B54f5Ed2) (OwnerSet(address indexed oldOwner, address indexed newOwner)) {
+    EMIT LOG LINE ("Owner set");
+
+    EMIT LOG LINE (oldOwner);
+    EMIT LOG LINE (newOwner);
+
+    EMIT XES EVENT ()(newOwner)()("is the owner of the contract now!" as xs:string concept:Added);
+    }
+
+
+
+}
