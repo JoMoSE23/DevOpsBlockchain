@@ -40,13 +40,6 @@ interface IContractRegistryMod {
    function getUpgrader(string memory name) external view returns (address);
 
    /**
-    *  @notice RECOMMENDED The function that returns an implementation of the given proxy contract
-    *  @param name the name of the contract
-    *  @return the implementation address
-    */
-   function getImplementation(string memory name) external view returns (address);
-
-   /**
     *  @notice REQUIRED The function that upgrades added proxy contract with a new implementation
     *  @param name the name of the proxy contract
     *  @param newImplementation the new implementation the proxy will be upgraded to
