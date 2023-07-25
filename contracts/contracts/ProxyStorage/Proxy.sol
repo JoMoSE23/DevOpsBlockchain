@@ -4,7 +4,7 @@ pragma solidity ^0.8.18;
 //This is the implementation of the normal proxy pattern
 //Used delegate is the Contract 1_Storage.sol provided upfront by remix.ethereum.org
 // calldata: 0x6057361d0000000000000000000000000000000000000000000000000000000000000006
-contract ProxyPattern{
+contract Proxy{
 
     
     //event numberUpdated(uint256 numberOld, uint256 numberNew);

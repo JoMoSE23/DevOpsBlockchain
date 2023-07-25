@@ -11,17 +11,17 @@ import "./DiamondStorage.sol";
  */
 contract Storage is DiamondStorage{
 
-    event numberUpdated(uint256 numberOld, uint256 numberNew);
+    event numberUpdated(uint256 _numberOld, uint256 _numberNew);
     /**
      * @dev Store value in variable
      * @param num value to store
      */
-    function store(uint256 num, uint scale) external returns (uint256) {
+    function store(uint256 _num, uint256 _scale) external returns (uint256) {
         MyStorage storage ms = myStorage();
         uint256 tmpNum = ms.num100;
-        ms.num100 = num*scale;
+        ms.num100 = _num*_scale;
         emit numberUpdated(tmpNum, ms.num100);
-        return num*scale;
+        return _num*_scale;
     }
 
     /**

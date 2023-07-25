@@ -10,19 +10,19 @@ pragma solidity ^0.8.18;
 contract Storage {
 
     uint256 public number;
-    event numberUpdated(uint256 numberOld, uint256 numberNew);
+    event numberUpdated(uint256 _numberOld, uint256 _numberNew);
     /**
      * @dev Store value in variable
      * @param num value to store
      */
-    function store(uint256 num) external returns (uint256) {
+    function store(uint256 _num) external returns (uint256) {
         uint256 tmpNum = number;
-        number = num;
+        number = _num;
         emit numberUpdated(tmpNum, number);
         bytes32 position = keccak256("number");
             assembly {
-            sstore(position, num)}
-        return num;
+            sstore(position, _num)}
+        return _num;
     }
 
     /**
