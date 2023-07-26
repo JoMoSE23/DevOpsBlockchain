@@ -2,18 +2,18 @@
 
 ## General approach for replication:
 
-   1. Start a private Ethereum network with geth. Further information about the setup can be found on https://geth.ethereum.org/docs/fundamentals/private-network
+   1. Start a private Ethereum network with geth. Further information about the setup can be found at https://geth.ethereum.org/docs/fundamentals/private-network
    2. Connect your MetaMask to this network
-   3. Deploy a contract on the network. You can insert the contracts in this repository into the Remix IDE and deploy it via MetaMask.
+   3. Deploy a contract on the network. You can insert the contracts in this repository into the Remix IDE and deploy them via MetaMask.
    4. Run the BLF using the manifests in this repository
 
 ## Additional information
 
-   To start the network used during the experiments of the paper copy the information below. 
+   To start the network used during the experiments in the paper, copy the information below. 
    Please consider that updates to geth or other unpredictable effects may change the functionality of this setup, which is why it may be necessary to create a new network.
    As long as it is a functioning private network created with geth the experiments should be replicable.
 
-## Information of the private Ethereum network stored in the repository:
+## Information abozt the private Ethereum network stored in the repository:
 
    - **node1**:
    
