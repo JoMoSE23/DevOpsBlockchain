@@ -5,7 +5,7 @@
    1. Start a private Ethereum network with geth. Further information about the setup can be found at https://geth.ethereum.org/docs/fundamentals/private-network
    2. Connect your MetaMask to this network
    3. Deploy a contract on the network. You can insert the contracts in this repository into the Remix IDE and deploy them via MetaMask.
-   4. Run the BLF using the manifests in this repository
+   4. Run the BLF using the manifests in this repository. More information about the Blockchain-Logging-Framework can be found at https://github.com/TU-ADSP/Blockchain-Logging-Framework
 
 ## Additional information
 
